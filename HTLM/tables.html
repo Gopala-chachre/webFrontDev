@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, th{
+            border: 1px solid #1e0606;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color: #949494;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+    <p>
+        A table is a structured arrangement of data made up of rows and columns. It is used to organize and present information in a clear and concise manner. Tables are commonly used in various contexts, such as in spreadsheets, databases, and web pages, to display data in a tabular format.
+    </p>
+    <p>
+        To get the emmet shortcuts for tables or any other html elements you can visit the following link
+        <a target="_blank" href="https://docs.emmet.io/cheat-sheet/" style="color: #4ca3ff;">Emmet Cheat Sheet</a>
+    </p>
+
+    <!-- table>tr>th*3 -->
+    <table style="width: 100%;">
+        <colgroup>
+            <col span="2" style="background-color: #ffe600;">
+        </colgroup>
+        <tr>
+            <th>Country</th>
+            <th>Country code</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>IN</td>
+            <td>1,428,627,663</td>
+        </tr>
+        <tr>
+            <td>United States</td>
+            <td>US</td>
+            <td>339,996,563</td>
+        </tr>
+        <tr>
+            <td>China</td>
+            <td>CN</td>
+            <td>1,425,887,337</td>
+        </tr>
+        <tr>
+            <td>Japan</td>
+            <td>JP</td>
+            <td>125,836,021</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <table>
+        <tr>
+            <th colspan="2">Country</th>
+            <td>India</td>
+            <td>IN</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>Japan</td>
+            <td>JP</td>
+        </tr>
+    </table>
+
+    <hr/>
+    <p>
+        Now we see how to use tBody, tHead and tFoot, the <thead> element is used to group the header content of a table, while the <tbody> element is used to group the main body content of a table. The <tfoot> element is used to group the footer content of a table. These elements help improve the structure and accessibility of tables, making it easier for users to understand and navigate the data presented.
+    </p>
+    <table>
+        <!-- this is table head -->
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Country code</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <!-- this is table body -->
+        <tbody>
+            <tr>
+                <td>India</td>
+                <td>IN</td>
+                <td>1,428,627,663</td>
+            </tr>
+            <tr>
+                <td>United States</td>
+                <td>US</td>
+                <td>339,996,563</td>
+            </tr>
+            <tr>
+                <td>China</td>
+                <td>CN</td>
+                <td>1,425,887,337</td>
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <td>JP</td>
+                <td>125,836,021</td>
+            </tr>
+        </tbody>
+        <!-- this is table footer -->
+        <tfoot style="background-color: #ffe600;">
+            <tr>
+                <th>Total Population</th>
+                <th colspan="2">3,320,347,584</th>
+            </tr>
+        </tfoot>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #dfcfcf;
+        }
+    </style>
+</head>
+<body>
+    <h1>Images</h1>
+    <p>
+        for the images in sample use or for commersial use you can use the images from the following link
+        <a target="_blank" href="https://unsplash.com/" style="color: #4ca3ff;">Unsplash</a>
+        <br/>
+        and also from
+        <a target="_blank" href="https://www.pexels.com/" style="color: #4ca3ff;">Pexels</a>
+    </p>
+
+    <hr/>
+    <h2>Image with alt attribute</h2>
+    <img src="https://images.pexels.com/photos/34924711/pexels-photo-34924711.jpeg" width="400px" alt="No image">
+    <hr/>
+    <img src="./example01.png" width="400px" alt="No image"/>
+
+    <p>
+        Now for picture tag, the picture tag is used to display different images based on the screen size or resolution. It allows you to specify multiple sources for an image, and the browser will choose the most appropriate one to display. This is particularly useful for responsive design, where you want to serve different images for different devices.
+    </p>
+    <picture>
+        <source media="(max-width: 600px)" srcset="./example02.png"/>
+        <source media="(max-width: 440px)" srcset="./example01.png"/>
+        <img src="./example02.png" width="400px" alt="No image"/>
+        <img src="./example01.png" width="400px" alt="No image"/>
+    </picture>
+    <hr/>
+    <p>
+        Now time for image map, the image map is a feature in HTML that allows you to define clickable areas on an image. These areas can be linked to different URLs or trigger specific actions when clicked. Image maps are created using the <map> and <area> elements, where you define the coordinates of the clickable regions on the image.style="color: #4ca3ff;
+    </p>
+    <p>
+        we can also generate the image map using and online tools.
+        <br/>
+        for example <a target="_blank" href="https://www.image-map.net/" style="color: #4ca3ff;">Image Map Generator</a>
+    </p>
+
+    <!-- An image map generator -->
+    <img src="example03.png" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="one()" target="_blank" alt="Jupiter" title="Jupiter" href="https://en.wikipedia.org/wiki/Jupiter" coords="1402,705,156" shape="circle">
+    <area onclick="two()" target="_self" alt="Uranus" title="Uranus" href="https://en.wikipedia.org/wiki/Uranus" coords="2100,699,68" shape="circle">
+    <area onclick="three()" target="_blank" alt="Earth" title="Earth" href="https://en.wikipedia.org/wiki/Earth" coords="742,698,53" shape="circle">
+</map>
+
+    <script>
+        function one(){
+            alert("You clicked on Jupiter");
+        }
+        function two(){
+            alert("You clicked on Uranus");
+        }
+        function three(){
+            alert("You clicked on Earth");
+        }
+    </script>
+</body>
+</html>

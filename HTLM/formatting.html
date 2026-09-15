@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatting</title>
+</head>
+<body>
+    <h1>Formatting</h1>
+    <!-- <h1>Formatting 2</h1> -->
+    <h1>Formatting</h1>
+
+    <q>HTML formatting tags are used to format the text in a web page. 
+        These tags can be used to change the font, size, color, and style of the text. 
+        They can also be used to create lists, tables, and other elements on a web page.
+    </q>
+
+    <hr/>
+    <!-- 
+        ul>li*4
+    -->
+    <ul>
+        <li>b, strong</li>
+        <li>i, em</li>
+        <li>small</li>
+        <li>sub, sup</li>
+        <li>del, mark</li>
+    </ul>
+
+    <hr/>
+    <!-- 
+        Jab ye dikhana ho ki vi imformation ya text important h to uske liye <strong></strong> ha use hota h.
+        or baki bas normal hi bold karna h to bas <b></b> ka use karte h. 
+    -->
+    <p>This is <b>Important</b></p>
+    <p>This is <strong>Important</strong></p>
+    
+    <hr/>
+    <!-- 
+        jab kisi word ko italic me dikhana ho to uske liye <i></i> ka use karte h. 
+        or agar ye dikhana ho ki ye word important h to <em></em> ka use karte h.
+        ya bol sakte h ki jis word ko emphasize karna ho to <em></em> ka use karte h. 
+    -->
+    <p>This is <i>Italic</i></p>
+    <p>This is <em>Italic</em></p>
+
+    <hr/>
+    <!-- 
+        <small></small> tag is used to display the text in a smaller font size. 
+        It is often used to display disclaimers, copyright information, or other secondary information on a web page.
+    -->
+    <p>This is <small>Small</small> compare to normal.</p>
+
+    <hr/>
+    <!-- 
+        use of sub and sup tag
+        sub tag is used to display the text in subscript format, and sup tag is used to display the text in superscript format. 
+        The subscript text is displayed below the normal text, while the superscript text is displayed above the normal text. 
+        These tags are often used in mathematical equations, chemical formulas, and footnotes.
+    -->
+    <p>
+        Almost every developer's favorite molecule is
+        C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+        "caffeine."
+    </p>
+
+    <p>
+        <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>
+    </p>
+    <!-- <var> tag is used to display the text in italics -->
+    <hr/>
+    
+    <!-- 
+        <del></del> tag is used to display the text with a strikethrough effect, indicating that the text has been deleted or is no longer relevant. 
+        It is often used to show changes in a document or to indicate that a particular piece of information is no longer valid.
+        <mark></mark> tag is used to highlight the text, indicating that the text is important or relevant. 
+        It is often used to draw attention to specific keywords or phrases in a document, making it easier for readers to quickly identify important information.
+    -->
+    <p>This is <del>Deleted</del> text.</p>
+    <p>This is <mark>Marked</mark> text.</p>
+
+    <!-- 
+        <ins></ins> tag is used to display the text with an underline effect, indicating that the text has been inserted or added to a document.
+        It is often used to show changes in a document or to indicate that a particular piece of information is new or relevant.
+    -->
+    <p>This is <ins>Inserted</ins> text.</p>
+    <hr/>
+
+    <!-- 
+        <blockquote></blockquote> tag is used to display a block of text that is a quotation from another source.
+        It is often used to indicate that the text is a direct quote from a person, book, article, or other source. 
+        The text within the blockquote is typically indented and may be styled differently from the surrounding text to set it apart as a quotation.
+    -->
+    <blockquote cite="https://www.brainyquote.com/quotes/steve_jobs_416859">
+        "The only way to do great work is to love what you do." - Steve Jobs
+    </blockquote>
+
+    <hr/>
+    <!-- 
+        <a></a> tag is used to create hyperlinks in HTML.
+        The href attribute specifies the URL of the page the link goes to.
+        The target attribute specifies where to open the linked document.
+        The <a> tag can also be used to create links to other resources, such as email addresses, phone numbers, or files. 
+        The <a> tag can also be used to create links to specific sections within a web page using anchor links.
+    -->
+    <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Links</a>
+    <hr/>
+    <!-- 
+        <abbr></abbr> tag is used to define an abbreviation or acronym in HTML.
+        The title attribute is used to provide the full form of the abbreviation or acronym.
+        When a user hovers over the abbreviation or acronym, the full form is displayed as a tooltip. 
+        This tag is often used to provide additional information or context for abbreviations or acr
+    -->
+    <p>The <abbr title="Hypertext Markup Language">HTML</abbr> <span title="this is IS">is</span> the standard markup language for creating web pages.</p>
+    
+    <p>
+        And now to know more about HTML formatting tags, you can visit <a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank">HTML Formatting Tags</a>.
+        and also we can go on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements" target="_blank">MDN Web Docs</a> for <strong>best practices</strong>.
+        <br/>
+        and see the attributes also on MDN, this site contain all html tags and their attributes with examples,
+        <b>also use for css and js reference.</b>
+    </p>
+    <hr/>
+
+    <h3 style="text-align: center;
+        color: rgb(39, 12, 118);
+        background-color: #10d697;
+        font-size: 30px;">
+        This tag needs styling
+    </h3>
+
+</body>
+</html>
