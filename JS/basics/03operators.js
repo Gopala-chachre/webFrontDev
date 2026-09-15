@@ -127,3 +127,6 @@ console.log(m + " - " + n); // Hello World
 
 m += " " + n; // m = m + " " + n
 console.log(m); // Hello World
+
+let s = `hello ${n} welcome to the ${m}`; // string interpolation
+console.log(s); // hello World welcome to the Hello World
