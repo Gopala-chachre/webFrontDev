@@ -1,4 +1,4 @@
-// Control Structures in JavaScript
+// Control Statements in JavaScript
 
 // 1. Conditional Statements
 //    a. if statement
