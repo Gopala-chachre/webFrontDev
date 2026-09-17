@@ -130,3 +130,13 @@ console.log("Principal's Name: " + school.principal.name);
 console.log("First Student's Name: " + school.students[0].name);
 
 
+// objects forEach() method
+const fruits = {
+    apple: 1,
+    banana: 2,
+    cherry: 3
+};
+
+Object.keys(fruits).forEach(function(key) {
+    console.log(key + ": " + fruits[key]);
+});
