@@ -126,3 +126,13 @@ function greet() {
 
 greet();
 
+console.log(+"---------------------------------------------------+");
+
+//Lexical Scope vs Scope Chain
+
+// Lexical Scope:
+// Decide karta hai ki kaunsa scope kis outer scope se connected hai.
+
+// Scope Chain:
+// Us connection ka use karke variable ko search karta hai.
+
