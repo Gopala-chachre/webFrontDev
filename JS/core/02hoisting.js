@@ -101,4 +101,48 @@ const b = 30;
 
 console.log("+-----------------------------------------------------+");
 
-// Function
+// Function declarations ka Hoisting
+
+greet();
+
+function greet() {
+    console.log("Hello");
+}
+
+// Function ko call karne se pehle define nahi kiya, phir bhi kaam kar raha hai.
+// Because function declarations are hoisted.
+
+console.log("+------------------------------------------------------+");
+
+// Lekin Function Expression?
+
+greet();
+
+var greet = function() {
+    console.log("Hello");
+}; //TypeError
+
+// Why? :Because var greet hoist hota hai, but function assignment nahi.
+
+// internaly
+var greet;
+
+greet(); // greet is undefined
+
+greet = function() {
+    console.log("Hello");
+};
+
+// Function Declaration  ✅ Works
+// Function Expression   ❌ Doesn't work
+// Arrow Function        ❌ Doesn't work
+
+console.log("+------------------------------------------------------+");
+
+
+// Hoisting ka actual benefit kya hai?
+// Historically JavaScript ko aise design kiya gaya ki 
+// declarations execution se pehle environment mein establish ho sakein.
+// Isliye function declarations ko code mein baad mein likhne ke baad bhi call kar sakte ho.
+// Lekin modern JavaScript mein generally code ko predictable order mein likhna better practice 
+// hai, taaki hoisting tricks par depend na karna pade.
