@@ -112,3 +112,69 @@ function createFunction() {
 // return kar sakte ho
 // object ke andar rakh sakte ho
 // array ke andar rakh sakte ho
+
+
+// Callback ka real use
+
+function processUser(name, callback) {
+    console.log("Processing " + name);
+
+    callback();
+}
+processUser("Gopala", function() {
+    console.log("Done!");
+});
+
+console.log("+-------------------------------------+");
+
+function calculate(a, b, callback) {
+    let result = a + b;
+    callback(result);
+}
+
+calculate(10, 20, function(result) {
+    console.log(result);
+});
+
+console.log("+-------------------------------------+");
+
+function calculate(a, b, callback) {
+    let result = a + b;
+    callback(result);
+}
+
+calculate(10, 20, (result) => {
+    console.log(result);
+});
+
+// or
+
+calculate(10, 20, result => console.log(result));
+
+console.log("+-------------------------------------+");
+
+const numbers = [10, 20, 30];
+
+numbers.forEach(function(num) {
+    console.log(num);
+});
+
+console.log("+-------------------------------------+");
+
+numbers.forEach(num => {
+    console.log(num);
+});
+
+//or
+
+numbers.forEach(num => console.log(num));
+
+console.log("+-------------------------------------+");
+
+// Callback ko 2 values mil sakti hain
+// const numbers = [10, 20, 30];
+
+numbers.forEach((num, index) => {
+    console.log(index, num);
+});
+
