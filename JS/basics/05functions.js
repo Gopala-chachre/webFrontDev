@@ -86,3 +86,29 @@ const double = multiplier(2);
 console.log(double(5)); // Output: 10
 
 console.log("+-------------------------------------+");
+
+// Higher-order functions
+
+// Jo function:
+// kisi function ko argument ke roop me accept kare, ya
+// kisi function ko return kare
+
+function execute(fn) {
+    fn();
+}
+
+function createFunction() {
+    return function() {
+        console.log("Hello");
+    };
+}
+
+// JavaScript me functions first-class citizens hain.
+
+// Matlab function ko:
+
+// variable me store kar sakte ho
+// argument ke roop me pass kar sakte ho
+// return kar sakte ho
+// object ke andar rakh sakte ho
+// array ke andar rakh sakte ho
