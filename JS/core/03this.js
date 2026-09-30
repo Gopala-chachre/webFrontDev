@@ -213,7 +213,87 @@ newGreet();
 //   ↓
 // this = person
 
+
+console.log("+--------------------------------------+")
 // IMP
 // call()  → immediately execute
+
+// call() se hum decide kar sakte hain ki this kis object ko refer karega.
+function hello(){
+    console.log(this.nameG);
+}
+
+let man1 = {
+    nameG : "aman"
+};
+
+let man2 = {
+    nameG : "amit"
+};
+
+hello.call(man1);
+hello.call(man2);
+
+// Syntax:
+// functionName.call(object);
+// functionName.call(object, arg1, arg2); with arguments
+
+console.log("+-------------------------------------+");
+
 // apply() → immediately execute
+// apply() ka kaam almost call() jaisa hi hai. Main difference sirf arguments pass karne ka hai.
+// Arguments array ke andar pass hote hain: apply(object, [arg1, arg2])
+
+function car(color, model){
+    console.log(`${this.carN} and with color : ${color} with model : ${model}`);
+}
+
+let cars= {
+    carN : "Mustang"
+};
+
+car.apply(cars, ["Yellow", 1969]);
+console.log("+-------------------------------------+");
+
 // bind()  → new function return
+
+// bind() function ko turant execute nahi karta.
+// Ye ek new function return karta hai, jisme this permanently set hota hai.
+
+let newCar = car.bind(cars, "black", 1970);
+newCar();
+
+console.log("+-------------------------------------+");
+// now the problem statement
+// Ek student object banao jisme:
+
+// name = "Gopala"
+// course = "MCA"
+// showDetails() naam ka method ho.
+
+// showDetails() ke andar this ka use karke output print karo:
+
+let stuDetails = {
+    stuName : "Gopala Chachre",
+    course : "MCA",
+
+    showDetails() {
+        console.log(this.stuName);
+        console.log(this.course);
+    }
+};
+
+stuDetails.showDetails();
+
+console.log("+--------------------------------------+")
+let stuDetails1 = {
+    stuName : "Gopala Chachre",
+    course : "MCA",
+
+    showDetails: ()=> { // because it use the outer scope this not make there own
+        console.log(this.stuName); // undefined
+        console.log(this.course);  // undefined
+    }
+};
+
+stuDetails1.showDetails();
