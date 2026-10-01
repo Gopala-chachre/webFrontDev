@@ -55,6 +55,13 @@ for (let fruit of fruits) {
     console.log(fruit);
 } 
 
+// forEach() new array return nahi karta.
+let nums = [10,20,40];
+
+let result = nums.forEach(num => num * 2);
+
+console.log(result);
+
 console.log("+-------------------------------------+");
 
 // 6. Array Methods
@@ -63,7 +70,7 @@ fruits.forEach(function(fruit) {
 });
 
 console.log("+-------------------------------------+");
-
+// Array ke har element ko transform/change karke new array banana.
 let numbers = [1, 2, 3, 4, 5];
 let doubled = numbers.map(function(num) {
     return num * 2;
@@ -72,6 +79,7 @@ console.log(doubled);
 
 console.log("+-------------------------------------+");
 
+// Jo elements condition satisfy karein, unko lekar new array banata hai.
 let evenNumbers = numbers.filter(function(num) {
     return num % 2 === 0;
 });
@@ -79,6 +87,7 @@ console.log(evenNumbers);
 
 console.log("+-------------------------------------+");
 
+// Array ke multiple elements ko ek single value mein reduce karta hai.
 let sum = numbers.reduce(function(accumulator, currentValue) {
     return accumulator + currentValue;
 }, 0);
@@ -88,12 +97,17 @@ console.log(sum);
 const [firstFruit, secondFruit] = fruits;
 console.log("First Fruit: " + firstFruit + ", Second Fruit: " + secondFruit);
 
-// 8. Array.includes(), Array.indexOf(), Array.find()
+// 8. Array.includes(), Array.indexOf(), Array.find(), Array.findIndex()
 console.log(fruits.includes("Apple")); // true
 console.log(fruits.indexOf("Blueberry")); // 1
 console.log(numbers.find(function(num) {
     return num > 3;
-})); // 4
+})); // 4, :Condition satisfy karne wala first element return karta hai.
+
+
+let index = nums.findIndex(num => num > 20);
+
+console.log(index); // find() ki tarah, but element nahi, uska index return karta hai.
 
 console.log("+-------------------------------------+");
 
@@ -117,3 +131,40 @@ console.log(arrOfNumbers); // [1, 2, 3, 4]
 
 let joined = fruits.join(", ");
 console.log(joined); // Apple, Blueberry, Cherry, Date, Elderberry
+
+console.log("+-------------------------------------+");
+
+// 11. Array.some(), Array.every()
+
+console.log(nums.some(num => num > 25)); // Check karta hai ki at least ONE element condition satisfy karta hai ya nahi.
+
+console.log(nums.every(num => num > 5)); // Check karta hai ki ALL elements condition satisfy karte hain ya nahi.
+
+// 12. Array.sort(), Array.flat()
+
+nums.sort();
+nums.sort((a, b) => b - a); // Descending
+console.log(nums);
+
+let arr = [1, 2, [3, 4], 5];
+
+console.log(arr.flat());
+
+let arr1 = [1, [2, [3, [4]]]];
+
+console.log(arr1.flat(2));
+
+
+// | Method        | Work                      | Return                |
+// | ------------- | ------------------------- | --------------------- |
+// | `forEach()`   | Har element par operation | `undefined`           |
+// | `map()`       | Elements transform karna  | **New array**         |
+// | `filter()`    | Condition wale elements   | **New array**         |
+// | `reduce()`    | Multiple → single value   | **Single value**      |
+// | `find()`      | First matching element    | Element / `undefined` |
+// | `findIndex()` | First matching index      | Index / `-1`          |
+// | `some()`      | Koi ek condition satisfy? | `true/false`          |
+// | `every()`     | Sab condition satisfy?    | `true/false`          |
+// | `sort()`      | Sort karna                | Sorted array          |
+// | `includes()`  | Value present?            | `true/false`          |
+// | `flat()`      | Nested array flatten      | **New array**         |
